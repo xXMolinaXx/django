@@ -1,0 +1,9 @@
+- settings.py el valor DIRS guarda la ruta a los emlates
+- python manage.py runserver
+- python manage.py startapp <nombre> para crear aplicacion
+- las aplicaciones son sub divisiones del proyecto principal
+- python manage check 
+- python manage.py makemigrations crear la base de datos y las tablas
+- python manage.py migrate crear la base de datos y las tablas
+- python manage.py sqlmigrate <nombre> <numero de migracion>
+- python manage.py shell abrir un shel desde el proyecto
