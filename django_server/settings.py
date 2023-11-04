@@ -76,9 +76,11 @@ WSGI_APPLICATION = 'django_server.wsgi.application'
 
 # importante
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.mysql",
+        "OPTIONS": {
+            "read_default_file": "my.cnf",
+        },
     }
 }
 
