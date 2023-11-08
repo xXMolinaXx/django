@@ -1,30 +1,25 @@
 from django.http import HttpResponse, HttpResponseRedirect
+from django.views.decorators.http import require_http_methods
+from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import get_object_or_404, render
+from django.http import JsonResponse
 from django.urls import reverse
 from .models import Clientes
 
 def index(request):
     return HttpResponse("Hello, world. You're at the polls index.")
 
-def cliente(request, cliente_id):
-    question = get_object_or_404(Clientes, pk=cliente_id)
-    print(request.POST["id"])
+@require_http_methods(["POST"])
+# @require_POST()
+@csrf_exempt
+def cliente(request,cliente_id):
+    cliente = get_object_or_404(Clientes, pk=cliente_id)
     try:
-        selected_choice = question.choice_set.get(pk=request.POST["choice"])
-    except (KeyError, Choice.DoesNotExist):
+        selected_client = Clientes.objects.get(id=request.POST.get('cliente_id'))
+        print(selected_client)
+    except Exception as e :
         # Redisplay the question voting form.
-        return render(
-            request,
-            "polls/detail.html",
-            {
-                "question": question,
-                "error_message": "You didn't select a choice.",
-            },
-        )
+        print(e)
+        return JsonResponse({"message":"error"})
     else:
-        selected_choice.votes += 1
-        selected_choice.save()
-        # Always return an HttpResponseRedirect after successfully dealing
-        # with POST data. This prevents data from being posted twice if a
-        # user hits the Back button.
-        return HttpResponseRedirect(reverse("polls:results", args=(question.id,)))
+        return JsonResponse({"message":"todo bien"})

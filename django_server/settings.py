@@ -52,6 +52,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 CORS_ORIGIN_ALLOW_ALL = True
+CSRF_COOKIE_DOMAIN = '0.0.0.0'
 
 ROOT_URLCONF = 'django_server.urls'
 # importante
