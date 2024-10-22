@@ -23,3 +23,6 @@
 ### DJANGO ADMIN
 -  python manage.py createsuperuser
 - /admin default url for admin
+
+## INSTALAR DEPENDENCIA
+- pip install -r requirements.txt( el archivo puede llamarse de cualquier forma pero normalmente se llama requirements)
