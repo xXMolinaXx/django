@@ -1,3 +1,6 @@
+## Requerimientos 
+- python 3.11.1
+
 - settings.py el valor DIRS guarda la ruta a los templates
 ### Iniciar servidor
 - python manage.py runserver
