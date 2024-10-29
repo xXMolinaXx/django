@@ -3,6 +3,13 @@
 import os
 import sys
 
+required_version = (3, 1)  # Cambia a la versión que tu proyecto necesita
+if sys.version_info[:2] < required_version:
+    raise RuntimeError(
+        f"Este proyecto requiere Python {required_version[0]}.{required_version[1]}"
+        f"Estás usando Python {sys.version_info[0]}.{sys.version_info[1]}"
+    )
+
 
 def main():
     """Run administrative tasks."""
