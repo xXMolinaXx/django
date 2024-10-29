@@ -1,9 +1,10 @@
 ## Requerimientos 
 - python 3.11.1
-
+- mysql
 - settings.py el valor DIRS guarda la ruta a los templates
 ### Iniciar servidor
 - python manage.py runserver
+- debes tener la base de datos activa de mysql
 #### otros
 - python manage.py startapp <nombre> para crear aplicacion
 - las aplicaciones son sub divisiones del proyecto principal
