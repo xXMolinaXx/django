@@ -5,6 +5,10 @@
 ### Iniciar servidor
 - python manage.py runserver
 - debes tener la base de datos activa de mysql
+- Para iniciar el proyecto en ubuntu debes instalar unas librerias , sin estos al querer ejecutar pip instal -r requirements te tirara errores de la libreria de sqlmyclient en ubuntu, probablemente cuando leas esto no sera lo mismo y tire errores 
+```
+sudo apt-get install python3-dev default-libmysqlclient-dev build-essential pkg-config
+```
 #### otros
 - python manage.py startapp <nombre> para crear aplicacion
 - las aplicaciones son sub divisiones del proyecto principal

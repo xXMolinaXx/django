@@ -80,13 +80,16 @@ WSGI_APPLICATION = 'django_server.wsgi.application'
 
 # importante
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.mysql",
-        "OPTIONS": {
-            "read_default_file": "my.cnf",
-        },
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'django_test',
+        'USER': 'root',
+        'PASSWORD': 'my-secret-pw',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
+
 
 
 # Password validation
